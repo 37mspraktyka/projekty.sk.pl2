@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+    <section name="home">
+        <!-- DZIALA: -->
+        <div class="container" > 
+
+            <div class="navbar">
+                <div class="logo">S<span>K</span>.<sp>RENT</sp></div>
+                <ul class="links">
+                    <li><a href="/">Strona Główna</a></li>
+                    <!-- <li><a href="#About">O nas</a></li>
+                    <li><a href="#Services">Usługi</a></li> -->
+                    <li><a href="/dodaj-pokoj">Dodaj Pokój</a></li>
+                    <li><a href="/edytuj">Edytuj</a></li>
+                </ul>
+                <li class="contact"><a href="/contact">Kontakt</a></li>
+            
+                <div class="box " type="">
+                    <span class="line l1"></span>
+                    <span class="line l2"></span>
+                    <span class="line l3"></span>   
+                </div>
+            </div>
+            <div class="dropdown" style="transition: .4s;">
+                <ul class="dropdown-li">
+                    404, Not updated yet
+                    <!-- <li><a href="#home">Strona Główna</a></li>
+                    <li><a href="#About">O nas</a></li>
+                    <li><a href="#Services">Usługi</a></li>
+                    <li><a href="#Contact">Kontakt</a></li> -->
+            
+                </ul>
+            </div>
+
+
+            <div class="HouseBox">
+                <div class="grid-container">
+                    {% for pokoj in pokoje %}
+                    {% if pokoj.is_reserved%}
+                    <div class="pokoj">
+                        <p class="status" is_reserved='True'>
+                            <span class="test1">ID: {{ pokoj.id}}<br></span>
+                            Zajęty<br>
+                            {{data}} </p>
+                        <p></p>
+                    </div>
+                    {% else %}
+                    <div class="pokoj">
+                        <p class="status" is_reserved='False'><span class="test1">{{ pokoj.id}} | </span> Wolny</p>            
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                
+            </div>
+
+
+        </div>
+
+    </section>
+</body>
+</html>
+
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/navbar.js')}}"></script>
+    <script type="text/javascript" src="../static/js/navbar.js"></script>
+</body>
+</html>
+</body>
+</body>
+</html>

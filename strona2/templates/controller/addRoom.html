@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../static/css/controller/addRoom.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/controller/addRoom.css')}}">
+</head>
+<body>
+    <section name="home">
+        <!-- DZIALA: -->
+        <div class="container" > 
+
+            <div class="navbar">
+                <div class="logo">S<span>K</span>.<sp>RENT</sp></div>
+                <ul class="links">
+                    <li><a href="/">Strona Główna</a></li>
+                    <li><a href="/dodaj-pokoj">Dodaj Pokój</a></li>
+                    <li><a href="/edytuj">Edytuj</a></li>
+                </ul>
+                <li class="contact"><a href="/contact">Kontakt</a></li>
+            
+                <div class="box " type="">
+                    <span class="line l1"></span>
+                    <span class="line l2"></span>
+                    <span class="line l3"></span>   
+                </div>
+            </div>
+            <!-- <div class="dropdown" style="transition: .4s;">
+                <ul class="dropdown-li">
+                    404, Not updated yet
+                    < <li><a href="#home">Strona Główna</a></li>
+                    <li><a href="#About">O nas</a></li>
+                    <li><a href="#Services">Usługi</a></li>
+                    <li><a href="#Contact">Kontakt</a></li> 
+            
+                </ul>
+            </div> -->
+
+
+            <div class="HouseBox">      
+                <div class="h-container">
+                    <p style="text-align: center; font-size: 38px; color: white; letter-spacing: .1rem;">Dodaj pokój  [ ID ]</p>
+                        <form method="post">
+                            <input type="text" id="id">
+                            <!--  is reserved == false -->
+                            <input type="date" id="date">
+                        </form>
+                        <button id="button">Click me</button>   
+
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../static/js/script2.js"></script>
+        <script src="{{ url_for('static', filename='js/script2.js')}}"></script>
+        <script>
+            
+        </script>
+    </section>
+</body>
+</html>

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #fc466b, #3f5efb);
+}
+
+.box{
+    flex-direction: column;
+    display: flex;
+    gap: 13px;
+    cursor: pointer;
+    transition: all 0.5s ease ;
+
+}
+
+.box .line{
+    gap: 13px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display:flex ;
+    height: 5px;
+    width: 50px;
+    background-color: white;
+    transform-origin: left;
+}
+
+
+
+.box.open .l1{
+    transform: rotate(45deg);
+}
+
+.box.open .l2 {
+    opacity: 0;
+    transition-delay: 0s;
+}
+
+.box.open .l3{
+    transform: rotate(-45deg);
+}
+ 
